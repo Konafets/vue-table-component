@@ -256,12 +256,12 @@ This will display values `Hi, I am John` and `Hi, I am Paul`.
      sort-by="songs"
      sort-order="asc"
 >
-     <table-column show="index" label="#"></table-column>
+     <table-column show="$index" label="#"></table-column>
      <table-column show="firstName" label="First name"></table-column>
      <table-column show="lastName" label="Last name"></table-column>
      <table-column label="#" :sortable="false" :filterable="false">
          <template scope="row">
-            {{ row.index }}
+            {{ row.$index }}
          </template>
      </table-column>
  </table-component>

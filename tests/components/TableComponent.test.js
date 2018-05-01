@@ -76,6 +76,25 @@ describe('TableComponent', () => {
         expect(document.body.innerHTML).toMatchSnapshot();
     });
 
+    it('supports retrieval of $index inside the table component', async () => {
+        document.body.innerHTML = `
+            <div id="app">
+                <table-component   
+                    :data="[{ fname: 'John'},{ fname: 'Paul'}]">
+                    <table-component label="First name">
+                        <template slot-scope="row">
+                            Person {{row.$index}}: {{row.fname}}
+                        </template>
+                    </table-component>
+                </table-component>
+            </div>
+        `;
+
+        await createVm();
+
+        expect(document.body.innerHTML).toMatchSnapshot();
+    });
+
     it('supports a named slot to display a tfoot section', async () => {
         document.body.innerHTML = `
             <div id="app">
