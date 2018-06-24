@@ -944,6 +944,83 @@ exports[`TableComponent supports a scoped slot inside the table column 1`] = `
 
 `;
 
+exports[`TableComponent supports retrieval of $index inside the table component 1`] = `
+
+<div id="app">
+  <div class="table-component">
+    <!---->
+    <div class="table-component__table-wrapper">
+      <table class="table-component__table">
+        <caption role="alert"
+                 aria-live="polite"
+                 class="table-component__table__caption"
+        >
+          Table not sorted
+        </caption>
+        <thead class="table-component__table__head">
+          <tr>
+            <th role="columnheader"
+                aria-disabled="true"
+                class="table-component__th"
+            >
+            </th>
+          </tr>
+        </thead>
+        <tbody class="table-component__table__body">
+          <tr>
+            <td>
+              Person 1: John
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Person 2: Paul
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+      </table>
+    </div>
+    <!---->
+    <div style="display: none;">
+      <div class="table-component"
+           label="First name"
+      >
+        <!---->
+        <div class="table-component__table-wrapper">
+          <table class="table-component__table">
+            <caption role="alert"
+                     aria-live="polite"
+                     class="table-component__table__caption"
+            >
+              Table not sorted
+            </caption>
+            <thead class="table-component__table__head">
+              <tr>
+              </tr>
+            </thead>
+            <tbody class="table-component__table__body">
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+        <div class="table-component__message">
+          There are no matching rows
+        </div>
+        <div style="display: none;">
+          Person :
+        </div>
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+</div>
+
+`;
+
 exports[`TableComponent will use the property name as a column heading if label is not set 1`] = `
 
 <div id="app">

@@ -6,7 +6,7 @@ export default {
     render(createElement, { props }) {
         const data = {};
 
-        props.row.data['index'] = (props.index + 1);
+        props.row.data['$index'] = (props.index + 1);
 
         if (props.column.cellClass) {
             data.class = props.column.cellClass;
